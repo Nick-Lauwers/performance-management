@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PerformanceManagement</title>
+    
+    <title><%= full_title(yield(:title)) %></title>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <%= favicon_link_tag 'https://performance-management-assets.s3.amazonaws.com/static-assets/logo-small.png' %>
   </head>
 
   <body>
-    <%= yield %>
+    
+    <header class="header">
+      <div class="container">
+        
+        <%= link_to "penguin", root_path, class: "header-logo" %>
+        
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Log in", '#' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
