@@ -60,27 +60,55 @@ span {
 
 /* buttons */
 
-.button {
+.btn {
   font-size: 1.1em;
   font-family: 'Source Sans Pro', sans-serif;
-  color: white;
   border-radius: 5px;
   box-shadow: 0 1px 8px 0 $gray-light;
-  padding: 0.8em 1.6em;
+  padding: 0;
   &:hover,
   &:focus {
     text-decoration: none;
-    color: white;
   }
 }
 
-.button-green {
+.btn-primary {
+  line-height: 50px;
+  height: 50px;
+  width: 100%;
+}
+
+.btn-secondary {
+  padding: 0.8em 1.6em;
+}
+
+.btn-green {
+  color: white;
   background-color: $green-dark;
+  border-color: $green-dark;
   transition: 0.2s;
   &:hover,
   &:focus {
-    background-color: $green-light;
+    color: white;
+    background-color: $green-light !important;
+    border-color: $green-light !important;
   }
+}
+
+.btn-outline {
+  color: $gray-darkest;
+  background-color: $beige;
+  border: 1px solid $gray-darkest;
+  border-radius: 5px;
+  &:hover,
+  &:focus {
+    color: $gray-darkest;
+    background-color: $beige;
+  }
+}
+
+.btn-icon-left {
+  margin-right: 0.5em;
 }
 
 /* header */
@@ -179,6 +207,21 @@ span {
   }
 }
 
+/* fields */
+
+.form-control {
+  box-shadow: none;
+  height: 50px;
+  margin-bottom: 2em;
+  &:focus {
+    box-shadow: none;
+  }
+  &::-webkit-input-placeholder {
+    font-size: 1.1em;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+}
+
 /* home */
 
 .hero {
@@ -199,7 +242,7 @@ span {
 
 .hero-description {
   width: 80%;
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
 }
 
 .hero-image {
@@ -259,4 +302,70 @@ span {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+/* signup */
+
+.signup,
+.login {
+  margin: 10em auto;
+}
+
+.signup {
+  max-width: 700px;
+}
+
+.login {
+  max-width: 400px;
+}
+
+.signup-title,
+.login-title {
+  margin-bottom: 1em;
+}
+
+.features-list {
+  list-style: none;
+  padding-left: 0;
+  li {
+    margin-top: 1em;
+  }
+}
+
+.signup-links {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.link {
+  font-size: 1.1em;
+  text-decoration: underline;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $gray-darkest;
+  &:hover,
+  &:focus {
+    color: $gray-darkest;
+  }
+}
+
+.signup-alternative {
+  text-align: center;
+  margin: 2em 0;
+  position: relative;
+}
+
+.signup-alternative-text {
+  background-color: $beige;
+  padding: 0 1em;
+  position: relative;
+  z-index: 1000;
+}
+
+.signup-alternative-line {
+  background-color: $gray-darkest;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
