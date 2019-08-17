@@ -10,6 +10,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       session["devise.google_data"] = request.env["omniauth.auth"]
     end
     
-    redirect_to root_path
+    redirect_to dashboard_path
   end
 end
