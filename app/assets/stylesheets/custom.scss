@@ -51,6 +51,10 @@ span {
   font-size: 1.1em;
 }
 
+.ui {
+  display: flex;
+}
+
 .image {
   background-color: $gray;
   background-size: cover;
@@ -222,88 +226,6 @@ span {
   }
 }
 
-/* home */
-
-.hero {
-  height: 500px;
-  margin: 10em 0;
-  position: relative;
-}
-
-.hero-text {
-  width: 50%;
-  position: absolute;
-  z-index: 1;
-}
-
-.hero-title {
-  margin: 0.5em 0 0.3em;
-}
-
-.hero-description {
-  width: 80%;
-  margin-bottom: 1.5em;
-}
-
-.hero-image {
-  height: 100%;
-  width: 700px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-/* about */
-
-.about {
-  margin: 10em 0 2em;
-  height: 700px;
-  position: relative;
-}
-
-.about-text {
-  width: 40%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.about-title {
-  margin-bottom: 0.5em;
-}
-
-.about-info {
-  margin-bottom: 2em;
-}
-
-.about-description {
-  margin-bottom: 1em;
-}
-
-.about-image-a {
-  height: 130px;
-  width: 125px;
-  position: absolute;
-  top: 0;
-  right: 220px;
-}
-
-.about-image-b {
-  height: 450px;
-  width: 250px;
-  position: absolute;
-  top: 150px;
-  right: 220px;
-}
-
-.about-image-c {
-  height: 300px;
-  width: 200px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 /* signup */
 
 .signup,
@@ -368,4 +290,177 @@ span {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/* home */
+
+.hero {
+  height: 500px;
+  max-width: 1008px;
+  margin: 10em auto;
+  position: relative;
+}
+
+.hero-text {
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.hero-title {
+  margin: 0.5em 0 0.3em;
+}
+
+.hero-description {
+  width: 80%;
+  margin-bottom: 1.5em;
+}
+
+.hero-image {
+  height: 100%;
+  width: 700px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* about */
+
+.about {
+  height: 700px;
+  max-width: 1008px;
+  margin: 10em auto 2em;
+  position: relative;
+}
+
+.about-text {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.about-title {
+  margin-bottom: 0.5em;
+}
+
+.about-info {
+  margin-bottom: 2em;
+}
+
+.about-description {
+  margin-bottom: 1em;
+}
+
+.about-image-a {
+  height: 130px;
+  width: 125px;
+  position: absolute;
+  top: 0;
+  right: 220px;
+}
+
+.about-image-b {
+  height: 450px;
+  width: 250px;
+  position: absolute;
+  top: 150px;
+  right: 220px;
+}
+
+.about-image-c {
+  height: 300px;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* dashboard */
+
+.sidebar {
+  background-color: $gray-darkest;
+  height: 100vh;
+  width: 250px;
+  padding: 1em;
+}
+
+.sidebar-logo {
+  letter-spacing: -0.05em;
+  color: white;
+}
+
+.sidebar-link {
+  display: block;
+  color: white;
+}
+
+.main {
+  min-width: 700px;
+  margin: 0 auto;
+}
+
+.aec-full-message-w.show-pack {
+  margin-top: 40px;
+}
+
+.aec-full-message-w {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 40px;
+}
+
+.aec-full-message-w {
+  -webkit-animation-name: fadeUp;
+  animation-name: fadeUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.aec-full-message-w.show-pack:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  top: -30px;
+  background-color: rgba(255,255,255,0.2);
+  -webkit-box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.aec-full-message-w .more-messages {
+  position: absolute;
+  left: 50%;
+  top: -55px;
+  color: rgba(0,0,0,0.4);
+  font-size: .72rem;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+
+.aec-full-message-w .aec-full-message {
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.aec-full-message-w.show-pack:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  top: -15px;
+  background-color: rgba(255,255,255,0.7);
+  -webkit-box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+  border-radius: 4px;
 }

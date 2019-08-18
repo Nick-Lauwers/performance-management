@@ -1,5 +1,7 @@
 <% provide(:title, "About") %>
 
+<%= render 'layouts/header_primary' %>
+
 <div class="about">
   
   <div class="about-text">
@@ -28,7 +30,7 @@
       </p>
     </div>
     
-    <%= link_to '#', class: "button-green button" do %>
+    <%= link_to '#', class: "btn-green btn-secondary btn" do %>
       Try for free
       <i class="fa fa-angle-right"></i>
     <% end %>
@@ -43,3 +45,5 @@
   <div class="about-image-c image"
        style="background-image: url('https://images.unsplash.com/photo-1524758870432-af57e54afa26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')"></div>
 </div>
+
+<%= render 'layouts/footer' %>
