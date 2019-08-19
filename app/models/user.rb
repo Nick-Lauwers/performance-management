@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+# Added by Koudoku.
+  has_one :subscription
+
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
